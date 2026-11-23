@@ -1,0 +1,48 @@
+name: Sync reviewed BOUNDARY notes to RSS
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync published notes (never pending ideas)
+        env:
+          BOUNDARY_SUPABASE_URL: ${{ secrets.BOUNDARY_SUPABASE_URL }}
+          BOUNDARY_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.BOUNDARY_SUPABASE_PUBLISHABLE_KEY }}
+          BOUNDARY_PUBLIC_URL: ${{ vars.BOUNDARY_PUBLIC_URL }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 scripts/sync_feed.py
+      - name: Commit refreshed feed if changed
+        run: |
+          if git diff --quiet -- feed.xml; then
+            echo 'No feed changes'
+            exit 0
+          fi
+          git config user.name 'BOUNDARY feed bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add feed.xml
+          git commit -m 'chore: refresh reviewed research RSS'
+          git push
+      - name: Publish refreshed feed on Pages
+        if: always()
+        env:
+          BOUNDARY_SUPABASE_URL: ${{ secrets.BOUNDARY_SUPABASE_URL }}
+          BOUNDARY_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.BOUNDARY_SUPABASE_PUBLISHABLE_KEY }}
+          BOUNDARY_PUBLIC_URL: ${{ vars.BOUNDARY_PUBLIC_URL }}
+        run: python3 scripts/write_public_config.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4

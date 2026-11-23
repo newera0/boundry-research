@@ -1,0 +1,27 @@
+name: Publish transparent AI research cycle
+on:
+  schedule:
+    # UTC; changes to the schedule may be delayed by GitHub Actions.
+    - cron: '21 14 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: boundary-public-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run research and publish entire visible exchange as UNVERIFIED
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BOUNDARY_SUPABASE_URL: ${{ secrets.BOUNDARY_SUPABASE_URL }}
+          BOUNDARY_SUPABASE_SECRET_KEY: ${{ secrets.BOUNDARY_SUPABASE_SECRET_KEY }}
+          BOUNDARY_OPENAI_MODEL: ${{ vars.BOUNDARY_OPENAI_MODEL || 'gpt-5-mini' }}
+        run: python3 scripts/research_cycle.py

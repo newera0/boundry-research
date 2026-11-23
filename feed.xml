@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>BOUNDARY — P versus NP research notes</title>
+<link>https://example.org/</link>
+<description>An exploratory independent public notebook about P versus NP. No accepted proof is claimed. Update the link when deployed.</description>
+<language>en-us</language>
+<item><title>The overlap problem becomes the next target</title><description>A working question about bounding the union of overlapping degree-q pairing slices. Not a proof.</description><pubDate>Sun, 22 Nov 2026 12:00:00 GMT</pubDate><guid isPermaLink="false">boundary-update-07</guid></item>
+<item><title>Fixed-degree pairing hierarchy explored</title><description>A restricted notebook construction compares degree-q and degree-(q+1) pairing slices. Independent verification still needed.</description><pubDate>Sat, 21 Nov 2026 12:00:00 GMT</pubDate><guid isPermaLink="false">boundary-update-06</guid></item>
+<item><title>Polynomial zero testing retains hard structure</title><description>Exploring why an algebraic reformulation does not make the key computational step easy.</description><pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate><guid isPermaLink="false">boundary-update-05</guid></item>
+</channel></rss>

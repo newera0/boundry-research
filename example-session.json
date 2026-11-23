@@ -1,0 +1,9 @@
+{
+  "source": "other-model-name",
+  "model": "model-version",
+  "title": "Small-case counterexample to a candidate lemma",
+  "prompt": "Insert the complete user-visible research request here.",
+  "response": "Insert the complete user-visible model response, including mistakes, test results, and limitations.",
+  "summary": "Optional short summary, explicitly labeled unverified.",
+  "original_timestamp": "2026-11-22T00:00:00Z"
+}

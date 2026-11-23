@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c1325" />
+  <meta name="description" content="A transparent public research notebook exploring P versus NP. Follow the methods, the obstacles, the evidence, and contribute a suggestion." />
+  <meta property="og:title" content="BOUNDARY — P versus NP, in public" />
+  <meta property="og:description" content="Follow the open questions, tested ideas, and research log of an independent P vs NP investigation." />
+  <meta property="og:type" content="website" />
+  <title>BOUNDARY — P versus NP, in public</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="application/rss+xml" title="BOUNDARY Research Updates" href="feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="Boundary, home">
+        <span class="brand-icon" aria-hidden="true"><span>∴</span></span>
+        <span class="brand-type">BOUNDARY<span class="brand-period">.</span><small>OPEN RESEARCH PROJECT</small></span>
+      </a>
+      <div class="side-section-label">THE WORKSPACE</div>
+      <nav class="nav-list" aria-label="Research sections">
+        <a class="nav-link active" data-nav="overview" href="#overview"><span data-icon="layout"></span>Overview <span class="nav-kbd">01</span></a>
+        <a class="nav-link" data-nav="activity" href="#activity"><span data-icon="refresh"></span>Activity stream <span class="nav-kbd">02</span></a>
+        <a class="nav-link" data-nav="live-lab" href="#live-lab"><span data-icon="flask"></span>Full session archive <span class="nav-kbd">03</span></a>
+        <a class="nav-link" data-nav="research" href="#research"><span data-icon="route"></span>Research paths <span class="nav-kbd">03</span></a>
+        <a class="nav-link" data-nav="journal" href="#journal"><span data-icon="history"></span>Research log <span class="nav-kbd">04</span></a>
+        <a class="nav-link" data-nav="challenges" href="#challenges"><span data-icon="target"></span>Open challenges <span class="nav-kbd">05</span></a>
+        <a class="nav-link" data-nav="community" href="#community"><span data-icon="users"></span>Community <span class="nav-kbd">06</span></a>
+      </nav>
+      <div class="side-divider"></div>
+      <div class="side-section-label">PROJECT RESOURCES</div>
+      <nav class="nav-list secondary-nav" aria-label="Project resources">
+        <a class="nav-link" href="#about"><span data-icon="book"></span>The problem <span data-icon="arrow-up-right" class="nav-trailing"></span></a>
+        <a class="nav-link" href="feed.xml" target="_blank" rel="noopener"><span data-icon="rss"></span>RSS updates <span data-icon="arrow-up-right" class="nav-trailing"></span></a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="side-bottom-card">
+        <div class="side-bottom-top"><span class="pulse-dot"></span> RESEARCH STATUS</div>
+        <strong>Still an open problem.</strong>
+        <p>Every hypothesis is tested. Nothing is presented as a proof without scrutiny.</p>
+        <a href="#about">Our standards <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="sidebar-footer">INDEPENDENT RESEARCH <span>© 2026</span></div>
+    </aside>
+
+    <div class="main-column" id="overview">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open menu" aria-expanded="false"><span data-icon="menu"></span></button>
+        <div class="crumb"><span class="crumb-home">PUBLIC RESEARCH /</span> <strong>THE FRONTIER</strong></div>
+        <div class="topbar-actions">
+          <span class="top-status"><span class="status-signal"></span> Investigation ongoing</span>
+          <button class="icon-button" id="share-button" aria-label="Copy site link" title="Copy site link"><span data-icon="share"></span></button>
+          <button class="top-contribute" data-open-suggest>Contribute an idea <span data-icon="arrow-up-right"></span></button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+          <div class="hero-pattern" aria-hidden="true"><svg viewBox="0 0 780 410" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="linegrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b7a6ff" stop-opacity="0.45"/><stop offset="1" stop-color="#5bd9e0" stop-opacity="0.05"/></linearGradient></defs><g fill="none" stroke="url(#linegrad)" stroke-width="1"><path d="M140 435 C210 305 250 290 330 240 S430 120 515 145 S675 195 800 20"/><path d="M180 435 C250 305 300 310 375 250 S440 100 530 130 S680 170 780 -20"/><path d="M230 435 C305 320 333 290 420 250 S460 100 560 105 S710 120 790 -25"/><path d="M280 435 C330 325 380 270 450 230 S500 65 580 90 S725 105 800 -50"/><path d="M330 435 C370 310 420 265 500 200 S530 45 620 65 S745 80 820 -60"/><path d="M385 435 C420 300 475 230 555 175 S565 30 665 45 S785 40 835 -85"/></g><g fill="#a493ff"><circle cx="516" cy="145" r="4"/><circle cx="560" cy="105" r="4"/><circle cx="620" cy="65" r="3"/></g><g stroke="#998be4" stroke-opacity="0.24" stroke-width="1"><circle cx="517" cy="145" r="32" fill="none"/><circle cx="517" cy="145" r="57" fill="none"/><circle cx="560" cy="105" r="21" fill="none"/></g></svg></div>
+          <div class="hero-content">
+            <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span> AN OPEN INVESTIGATION <span class="eyebrow-separator">/</span> EST. 2026</div>
+            <h1 id="hero-heading">The biggest question<br />in computing<span class="hero-accent">.</span><br /><em>Out in the open.</em></h1>
+            <p class="hero-description">Can every problem whose answer is easy to verify also be easy to solve? We're documenting an ongoing attempt to understand <strong>P vs NP</strong>, including the ideas that fail.</p>
+            <div class="hero-actions"><a class="hero-primary" href="#journal">Explore the research log <span data-icon="arrow-right"></span></a><a class="hero-secondary" href="#about">Understand P vs NP <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="hero-bottom"><span>THE FRONTIER IS NOT A FINISH LINE</span><span class="hero-bottom-right">RESEARCH NOTEBOOK <span class="hero-cross">✳</span> 001</span></div>
+        </section>
+
+        <section class="truth-strip" aria-label="Important research disclosure"><span class="truth-icon" data-icon="shield-check"></span><div><strong>No solution is being claimed.</strong> P vs NP remains unsolved. This site is an exploratory notebook, not a peer-reviewed proof or a measure of distance to a solution.</div><a href="#about">How claims are labeled <span>↗</span></a></section>
+
+        <section class="metrics" aria-label="Project summary">
+          <article class="metric"><div class="metric-label">EDITORIAL SEED NOTES <span data-icon="refresh"></span></div><div class="metric-main"><strong>07</strong><span class="metric-unit">documented rounds</span></div><div class="metric-foot">Initial investigation series</div></article>
+          <article class="metric"><div class="metric-label">ACTIVE FRONTIER <span data-icon="compass"></span></div><div class="metric-main"><strong>01</strong><span class="metric-unit">central open question</span></div><div class="metric-foot">Overlap of pairing slices</div></article>
+          <article class="metric"><div class="metric-label">VERIFIED SOLUTIONS <span data-icon="shield"></span></div><div class="metric-main"><strong>0</strong><span class="metric-unit">proofs accepted</span></div><div class="metric-foot">Accuracy before excitement</div></article>
+          <article class="metric"><div class="metric-label">LATEST NOTE <span data-icon="calendar"></span></div><div class="metric-main date-metric"><strong id="latest-date-label">Nov 22</strong><span class="metric-unit" id="latest-year-label">2026</span></div><div class="metric-foot">Last editorial update</div></article>
+        </section>
+
+        <section class="pulse-section" id="activity" aria-labelledby="activity-heading">
+          <div class="pulse-head">
+            <div><span class="pulse-overline"><span class="pulse-lit"></span> PUBLIC RESEARCH PULSE</span><h2 id="activity-heading">The work, as it happens<span class="heading-dot">.</span></h2><p>Recent published notes, open questions, and reviewed discussion. Nothing here implies a verified proof.</p></div>
+            <button id="pulse-refresh" type="button" class="pulse-refresh"><span data-icon="refresh"></span> Refresh activity</button>
+          </div>
+          <div class="pulse-grid">
+            <div class="pulse-feed"><div class="pulse-card-head"><span>LATEST RESEARCH ENTRIES</span><span id="pulse-sync-state">PUBLIC NOTEBOOK</span></div><div id="pulse-items" aria-live="polite"></div><a href="#journal" class="pulse-more">Read the full research log <span aria-hidden="true">↗</span></a></div>
+            <aside class="pulse-side">
+              <div class="pulse-focus"><span class="pulse-card-label">CURRENT QUESTION ON THE BOARD</span><span class="pulse-signal">OPEN PROBLEM</span><h3>Can overlapping pairing slices be bounded?</h3><p>We're looking for a sharp, overlap-aware coverage bound or a small counterexample that shows why the route fails.</p><button data-open-suggest class="pulse-contribute">Challenge this idea <span aria-hidden="true">↗</span></button></div>
+              <div class="pulse-community"><span class="pulse-card-label">FROM THE COMMUNITY</span><div id="pulse-community-summary"><strong>No reviewed discussion yet</strong><p>Strong objections and corrections are welcome. Contributions are published after moderation.</p></div><a href="#community">Explore the idea desk <span aria-hidden="true">↗</span></a></div>
+            </aside>
+          </div>
+          <div class="pulse-foot"><span id="pulse-last-date">Last public research note: Nov 22, 2026</span><span id="pulse-refresh-note">New published items appear automatically when the site is connected.</span></div>
+        </section>
+
+
+        <section class="section-wrap lab-section" id="live-lab" aria-labelledby="lab-heading">
+          <div class="section-title-row">
+            <div><div class="section-eyebrow">LIVE LAB / FULL TRANSPARENCY</div>
+              <h2 id="lab-heading">Every visible experiment<span class="heading-dot">.</span></h2>
+              <p>Original prompts, complete visible AI replies, failed runs, manual imports. No highlight reel.</p>
+            </div>
+            <span class="lab-transparency"><span class="tiny-live"></span> RAW RESEARCH, NOT A PROOF</span>
+          </div>
+          <div class="lab-explainer"><span data-icon="info"></span><p><strong>What “everything” means:</strong> All research sessions submitted to BOUNDARY appear here, whether the idea succeeds or fails. Separate ChatGPT conversations do not sync unless deliberately imported. Private model reasoning and personal secrets are not exposed. Every AI output is unverified.</p></div>
+          <div class="lab-toolbar">
+            <div class="lab-filter-group" role="group" aria-label="Filter research sessions">
+              <button class="lab-filter is-selected" type="button" data-lab-filter="all" aria-pressed="true">All runs</button>
+              <button class="lab-filter" type="button" data-lab-filter="auto" aria-pressed="false">Automated AI</button>
+              <button class="lab-filter" type="button" data-lab-filter="imported" aria-pressed="false">Imported</button>
+              <button class="lab-filter" type="button" data-lab-filter="failed" aria-pressed="false">Failures</button>
+            </div>
+            <span id="lab-count" class="lab-count">NOT CONNECTED</span>
+          </div>
+          <div id="lab-list" class="lab-list" aria-live="polite"><div class="lab-empty"><strong>Research pipeline is not connected yet.</strong><p>Once Supabase and GitHub Actions are set up, public session transcripts will appear here automatically. The seven notes below are editorial summaries, not full recorded transcripts.</p></div></div>
+          <button class="outline-button lab-more" id="lab-more" type="button" hidden>Load older research sessions <span data-icon="arrow-right"></span></button>
+          <p class="lab-footnote" id="lab-last-sync">No live research archive connected. P vs NP remains unsolved.</p>
+        </section>
+
+        <section class="section-wrap" id="research" aria-labelledby="research-heading">
+          <div class="section-title-row"><div><div class="section-eyebrow">01 / THE INVESTIGATION</div><h2 id="research-heading">Where the research stands<span class="heading-dot">.</span></h2><p>Four connected tracks. One unsolved question. Every limitation visible.</p></div><div class="view-toggle" aria-label="Explanation level"><button class="view-choice active" data-mode="plain" aria-pressed="true">Plain English</button><button class="view-choice" data-mode="technical" aria-pressed="false">Technical</button></div></div>
+          <div class="research-layout">
+            <div class="feature-card">
+              <div class="feature-top"><span class="eyebrow-tag"><span class="tiny-live"></span> ACTIVE WORKING DIRECTION</span><span class="feature-index">HYPOTHESIS / 003</span></div>
+              <div class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 200 90"><g fill="none" stroke="#a6a0ff" stroke-width="2"><path d="M7 44h52l30-28h31l28 28h44"/><path d="M7 70h42l39-28h27l39 28h38" stroke-opacity=".4"/><path d="M7 19h39l33 26h31l26-26h56" stroke-opacity=".4"/></g><g fill="#c8c4ff"><circle cx="89" cy="16" r="5"/><circle cx="148" cy="44" r="5"/><circle cx="89" cy="42" r="4"/><circle cx="154" cy="70" r="4"/></g></svg></div>
+              <div class="feature-main"><div class="feature-label">THE PAIRING-SLICE QUESTION</div><h3>Can simple cancellation rules ever cover <em>everything?</em></h3><p id="feature-explainer">Imagine pairing up many potential solutions so their contributions cancel. We want to know whether simple pairing rules can ever cover every difficult instance efficiently.</p><div class="feature-bottom"><span><span data-icon="circle-help"></span> Requires a general lower-bound bridge</span><button id="feature-deep-dive">Investigate this track <span data-icon="arrow-up-right"></span></button></div></div>
+            </div>
+            <div class="work-stack"><div class="small-card current-question"><div class="small-card-header"><span class="card-micro">THE NEXT QUESTION</span><span data-icon="crosshair"></span></div><h3>Where does the overlap argument break?</h3><p>Establish a rigorous coverage bound for degree-q slices without assuming the very hardness we hope to prove.</p><a href="#challenges">View open challenges <span>↗</span></a></div><div class="small-card checkpoint"><div class="small-card-header"><span class="card-micro">A CRITICAL CHECKPOINT</span><span data-icon="alert-triangle"></span></div><h3>Restricted ≠ universal</h3><p>A result for a narrow proof model is not automatically a result about every efficient algorithm.</p><span class="checkpoint-meta"><span data-icon="shield-check"></span> A standing verification rule</span></div></div>
+          </div>
+          <div class="tracks" id="track-list" aria-label="Research tracks"></div>
+        </section>
+
+        <section class="section-wrap journal-section" id="journal" aria-labelledby="journal-heading"><div class="section-title-row log-title-row"><div><div class="section-eyebrow">02 / THE RECORD</div><h2 id="journal-heading">The research log<span class="heading-dot">.</span></h2><p>Successes, dead ends, and unresolved steps. Kept together.</p></div><div class="log-count">CHRONOLOGICAL NOTEBOOK <span id="log-count">07 ENTRIES</span></div></div>
+          <div class="log-toolbar"><div class="filter-set" role="group" aria-label="Filter research log"><button class="filter-pill active" data-filter="all" aria-pressed="true">All notes</button><button class="filter-pill" data-filter="open" aria-pressed="false">Open questions</button><button class="filter-pill" data-filter="barrier" aria-pressed="false">Obstacles</button><button class="filter-pill" data-filter="conditional" aria-pressed="false">Conditional</button></div><label class="log-search"><span data-icon="search"></span><input id="log-search" type="search" placeholder="Search research" aria-label="Search research log" /></label></div>
+          <div class="log-list" id="log-list"></div><div class="log-empty" id="log-empty" hidden>No notes match those filters. Try another term.</div><div class="log-end"><span class="line"></span><span>END OF THE CURRENT PUBLIC RECORD</span><span class="line"></span></div>
+        </section>
+
+        <section class="section-wrap challenge-section" id="challenges" aria-labelledby="challenge-heading"><div class="section-title-row"><div><div class="section-eyebrow">03 / HELP MOVE THE WORK FORWARD</div><h2 id="challenge-heading">Open challenges<span class="heading-dot">.</span></h2><p>The most useful contribution may be a counterexample.</p></div><button class="outline-button" data-open-suggest><span data-icon="plus"></span> Suggest an approach</button></div><div class="challenge-grid" id="challenge-list"></div></section>
+
+        <section class="community-band" id="community"><div class="community-band-art" aria-hidden="true"><span>?</span><span>∴</span><span>≠</span></div><div class="community-eyebrow"><span class="tiny-live"></span> OPEN INVITATION</div><h2>Good mathematics<br />is a <em>team sport.</em></h2><p>Have a formal argument, an overlooked paper, a broken assumption, or a small counterexample? The project welcomes precise, constructive criticism as much as promising ideas.</p><div class="community-band-actions"><button class="community-main-button" data-open-suggest>Submit a research suggestion <span data-icon="arrow-up-right"></span></button><a href="#submission-guidelines">Read contribution guidelines <span>↗</span></a></div></section>
+
+        <section class="section-wrap community-section" aria-labelledby="ideas-heading"><div class="section-title-row"><div><div class="section-eyebrow">04 / FROM THE COMMUNITY</div><h2 id="ideas-heading">The idea desk<span class="heading-dot">.</span></h2><p>Explore reviewed ideas and offer thoughtful replies to advance the discussion.</p></div><span class="review-label"><span data-icon="check-circle"></span> MODERATED BEFORE PUBLICATION</span></div><div id="idea-list" class="idea-list"><div class="empty-ideas"><div class="empty-ideas-icon" data-icon="message-circle"></div><strong>Be part of the first discussion.</strong><p>No reviewed community notes have been published yet. Submit an approach or a counterexample to start the conversation.</p><button class="outline-button" data-open-suggest>Share an idea <span data-icon="arrow-right"></span></button></div></div><div id="submission-guidelines" class="guidelines"><div class="guidelines-heading"><span data-icon="info"></span> THE CONTRIBUTION STANDARD</div><p>State a clear claim and its assumptions. Include the exact model of computation, a small example or reproducible evidence when possible, and what would disprove it. Submissions are reviewed for relevance and clarity. Publication does not mean mathematical endorsement.</p></div></section>
+
+        <section class="section-wrap about-section" id="about" aria-labelledby="about-heading"><div class="section-eyebrow">05 / UNDERSTAND THE QUESTION</div><h2 id="about-heading">The problem, without the hype<span class="heading-dot">.</span></h2><div class="about-grid"><div class="about-main"><p class="about-lead">Some problems are easy to <em>check.</em> Are they also easy to <em>solve?</em></p><p><strong>P</strong> contains problems a deterministic computer can solve in polynomial time. <strong>NP</strong> contains problems where a proposed yes-answer can be verified in polynomial time. The question is whether those two classes are actually the same.</p><p>A proof either way would need to withstand mathematical review. Restricted examples, experiments, and analogies help guide research, but none alone settles the question.</p><a class="learn-link" href="https://www.claymath.org/millennium/p-vs-np-problem/" target="_blank" rel="noopener noreferrer">Explore the Clay Mathematics Institute overview <span data-icon="arrow-up-right"></span></a></div><div class="glossary"><div class="glossary-top">MINI GLOSSARY <span data-icon="book-open"></span></div><div id="glossary-list"></div></div></div><div class="ethics"><span data-icon="shield-check"></span><div><strong>Editorial and verification policy</strong><p>All progress on this page is labeled as working research until independently reproduced and reviewed. “Barrier,” “conditional,” and “working lemma” describe our notebook status, not accepted theorems. Updates are editorial, not automatic ChatGPT sync.</p></div></div></section>
+      </main>
+      <footer class="footer"><div><a href="#overview" class="footer-brand">BOUNDARY<span>.</span></a><p>Thinking in public. Proving with care.</p></div><div class="footer-links"><a href="#journal">Research log</a><a href="#community">Contribute</a><a href="feed.xml">RSS</a><button id="footer-share">Share this project ↗</button></div><div class="footer-bottom">© 2026 BOUNDARY · INDEPENDENT EXPLORATORY RESEARCH <span>NO P VS NP SOLUTION IS CLAIMED</span></div></footer>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="suggest-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-head"><div><div class="section-eyebrow">COMMUNITY / NEW IDEA</div><h2 id="modal-title">Contribute to the inquiry<span class="heading-dot">.</span></h2></div><button class="modal-close" id="modal-close" aria-label="Close submission form"><span data-icon="x"></span></button></div><p class="modal-intro">You don't need to have a solution. A clear objection or counterexample can be equally valuable.</p><form id="suggest-form"><div class="form-row"><label>Your name or handle <span>optional</span><input name="author" type="text" autocomplete="nickname" maxlength="60" placeholder="Anonymous researcher" /></label><label>Contribution type<select name="category" required><option value="counterexample">Counterexample / objection</option><option value="proof">Proof idea</option><option value="reference">Relevant paper or reference</option><option value="experiment">Experiment or test</option><option value="question">Question or clarification</option></select></label></div><label>Give your idea a title<input name="title" type="text" required minlength="8" maxlength="120" placeholder="A specific, testable claim" /></label><label>Your reasoning <span>min. 40 characters</span><textarea name="body" required minlength="40" maxlength="6000" rows="6" placeholder="What exactly is your claim? What assumptions does it require? What counterexample would refute it?"></textarea></label><label>Reference URL <span>optional</span><input name="reference_url" type="url" maxlength="500" placeholder="https://arxiv.org/..." /></label><div class="honeypot" aria-hidden="true"><label>Leave this blank<input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div><div id="submission-status" class="submission-status" role="status" aria-live="polite"></div><div class="modal-foot"><span id="backend-note">Suggestions require the public inbox to be connected by the site owner.</span><div class="modal-buttons"><button class="modal-copy" id="copy-submission" type="button"><span data-icon="copy"></span> Copy idea</button><button class="modal-submit" id="submit-suggestion" type="submit">Submit for review <span data-icon="arrow-right"></span></button></div></div></form></div></div>
+  <div class="modal-backdrop" id="reply-modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="reply-modal-title"><div class="modal-head"><div><div class="section-eyebrow">COMMUNITY / RESEARCH DISCUSSION</div><h2 id="reply-modal-title">Reply to an idea<span class="heading-dot">.</span></h2></div><button class="modal-close" id="reply-close" aria-label="Close reply dialog"><span data-icon="x"></span></button></div><p class="modal-intro" id="reply-target">Use evidence, a counterexample, or a precise question. Replies appear after review.</p><form id="reply-form"><input name="suggestion_id" type="hidden" /><label>Your name or handle <span>optional</span><input name="author" type="text" maxlength="60" placeholder="Anonymous researcher" /></label><label>Your reply <span>min. 20 characters</span><textarea name="body" required minlength="20" maxlength="3000" rows="5" placeholder="Where does the argument break, or what evidence supports it?"></textarea></label><div class="honeypot" aria-hidden="true"><label>Leave this blank<input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div><div class="submission-status" id="reply-status" role="status" aria-live="polite"></div><div class="modal-foot"><span id="reply-backend-note">Public replies need a connected inbox.</span><div class="modal-buttons"><button id="reply-copy" class="modal-copy" type="button">Copy reply</button><button id="reply-submit" class="modal-submit" type="submit">Submit for review <span data-icon="arrow-right"></span></button></div></div></form></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="mobile-overlay" class="mobile-overlay" hidden></div>
+</body>
+</html>
