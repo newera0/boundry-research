@@ -1,5 +1,8 @@
 # BOUNDARY
 
+**Public website:** https://newera0.github.io/boundry-research/  
+**Repository:** https://github.com/newera0/boundry-research/
+
 An independent, public research notebook documenting explorations around the open **P versus NP** problem.
 
 **You can follow research without pretending that an AI has solved P vs NP.** The website explicitly distinguishes complete AI research transcripts, condensed editorial notes, and community contributions. All unreviewed/AI claims are labeled **unverified**.
